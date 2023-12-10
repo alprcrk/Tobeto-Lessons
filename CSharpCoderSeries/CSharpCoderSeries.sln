@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceTypes", "Reference
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constructors", "Constructors\Constructors.csproj", "{11714412-DFF2-4DC0-9112-5B78C23B1E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{951B6351-E9DE-4E38-ABD8-CDED12FFA89B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{951B6351-E9DE-4E38-ABD8-CDED12FFA89B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{F4DD8F80-4F4C-49D0-8EFB-480842A8207E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{F4DD8F80-4F4C-49D0-8EFB-480842A8207E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingDemo1", "ThreadingDemo1\ThreadingDemo1.csproj", "{BF15E9BF-226D-4642-9270-A65A2F3105E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqProject", "LinqProject\LinqProject.csproj", "{ADB164D7-5C6C-41EF-99F4-AEF1BCBA579A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BF15E9BF-226D-4642-9270-A65A2F3105E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF15E9BF-226D-4642-9270-A65A2F3105E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF15E9BF-226D-4642-9270-A65A2F3105E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB164D7-5C6C-41EF-99F4-AEF1BCBA579A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB164D7-5C6C-41EF-99F4-AEF1BCBA579A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB164D7-5C6C-41EF-99F4-AEF1BCBA579A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB164D7-5C6C-41EF-99F4-AEF1BCBA579A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

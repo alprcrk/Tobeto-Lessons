@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace Business
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICourseService, CourseManager>();
             services.AddScoped<IInstructorService, InstructorManager>();
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;
         }

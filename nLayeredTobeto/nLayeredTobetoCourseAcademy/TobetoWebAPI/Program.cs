@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAutoMapper(typeof(CategoryMapping), typeof(CourseMapping), typeof(InstructorMapping));
+//builder.Services.AddAutoMapper(typeof(CategoryMappingProfile), typeof(CourseMappingProfile), typeof(InstructorMappingProfile));
+
 builder.Services.AddBusinessServices();
 builder.Services.AddDataAccessServices(builder.Configuration);
 

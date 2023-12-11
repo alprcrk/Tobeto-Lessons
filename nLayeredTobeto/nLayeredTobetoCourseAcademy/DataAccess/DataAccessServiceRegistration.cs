@@ -17,7 +17,7 @@ namespace DataAccess
         public static IServiceCollection AddDataAccessServices(this IServiceCollection services, IConfiguration configuration)
         {
             //services.AddDbContext<TobetoCourseAcademyContext>(options => options.UseInMemoryDatabase("nArchitecture"));
-            services.AddDbContext<TobetoCourseAcademyContext>(options => options.UseSqlServer(configuration.GetConnectionString("ETradeA")));
+            services.AddDbContext<TobetoCourseAcademyContext>(options => options.UseSqlServer(configuration.GetConnectionString("TobetoCourse")));
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddScoped<IInstructorDal, EfInstructorDal>();

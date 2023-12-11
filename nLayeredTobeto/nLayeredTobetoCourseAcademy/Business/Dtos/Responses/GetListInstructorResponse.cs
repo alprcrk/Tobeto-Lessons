@@ -1,15 +1,14 @@
-﻿using Entities.Concretes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Dtos.Requests
+namespace Business.Dtos.Responses
 {
-    public class CreateCategoryRequest
+    public class GetListInstructorResponse
     {
-        
+        public Guid Id { get; set; }
         public string Name { get; set; }
     }
 }

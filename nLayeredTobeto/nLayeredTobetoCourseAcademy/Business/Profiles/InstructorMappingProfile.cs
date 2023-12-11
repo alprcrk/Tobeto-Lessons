@@ -11,13 +11,14 @@ using System.Threading.Tasks;
 
 namespace Business.Mapping
 {
-    public class InstructorMapping : Profile
+    public class InstructorMappingProfile : Profile
     {
-        public InstructorMapping()
+        public InstructorMappingProfile()
         {
             CreateMap<CreatedInstructorResponse, Instructor>().ReverseMap();
             CreateMap<CreateInstructorRequest, Instructor>().ReverseMap();
-            CreateMap<Paginate<Instructor>, Paginate<CreatedInstructorResponse>>().ReverseMap();
+            CreateMap<Paginate<Instructor>, Paginate<GetListInstructorResponse>>().ReverseMap();
+            CreateMap<Instructor, GetListInstructorResponse>().ReverseMap();
         }
     }
 }

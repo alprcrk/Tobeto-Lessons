@@ -6,6 +6,7 @@ using Core.DataAccess.Paging;
 using DataAccess.Abstract;
 using DataAccess.Concretes;
 using Entities.Concretes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,11 @@ namespace Business.Concretes
             _mapper = mapper;
 
         }
-        public async Task<Paginate<CreatedCourseResponse>> GetListAsync()
+
+        public async Task<Paginate<GetListCourseResponse>> GetListAsync( )
         {
-            var result = await _courseDal.GetListAsync();
-            return _mapper.Map<Paginate<CreatedCourseResponse>>(result);
+            var result = await _courseDal.GetListAsync(include: c => c.Include(c => c.Category).Include(c => c.Instructor));
+            return _mapper.Map<Paginate<GetListCourseResponse>>(result);
         }
 
         public async Task<CreatedCourseResponse> Add(CreateCourseRequest createCourseRequest)

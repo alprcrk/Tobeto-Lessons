@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Business.Dtos.Requests
 {
-    public class CreateCategoryRequest
+    public class UpdateCategoryRequest
     {
-        
+        public Guid Id { get; set; }
         public string Name { get; set; }
     }
 }

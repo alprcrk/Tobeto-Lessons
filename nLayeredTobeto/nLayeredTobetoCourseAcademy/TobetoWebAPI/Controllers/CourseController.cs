@@ -8,10 +8,10 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoursesController : ControllerBase
+    public class CourseController : ControllerBase
     {
         ICourseService _courseSevice;
-        public CoursesController(ICourseService courseSevice)
+        public CourseController(ICourseService courseSevice)
         {
             _courseSevice = courseSevice;
         }
@@ -19,8 +19,8 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] CreateCourseRequest course)
         {
-            await _courseSevice.Add(course);
-            return Ok();
+            var result = await _courseSevice.Add(course);
+            return Ok(result);
         }
         [HttpGet]
         public async Task<IActionResult> GetList()

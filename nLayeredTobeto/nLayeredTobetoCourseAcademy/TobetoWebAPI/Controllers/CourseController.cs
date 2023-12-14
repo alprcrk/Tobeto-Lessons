@@ -10,22 +10,43 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        ICourseService _courseSevice;
-        public CourseController(ICourseService courseSevice)
-        {
-            _courseSevice = courseSevice;
-        }
+        ICourseService _courseService;
 
-        [HttpPost]
+        public CourseController(ICourseService courseService)
+        {
+            _courseService = courseService;
+        }
+        [HttpPost("Add")]
         public async Task<IActionResult> Add([FromBody] CreateCourseRequest course)
         {
-            var result = await _courseSevice.Add(course);
+            var result = await _courseService.Add(course);
             return Ok(result);
         }
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetList()
         {
-            var result = await _courseSevice.GetListAsync();
+            var result = await _courseService.GetListAsync();
+            return Ok(result);
+        }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update([FromBody] UpdateCourseRequest course)
+        {
+            var result = await _courseService.Update(course);
+            return Ok(result);
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete([FromBody] DeleteCourseRequest course)
+        {
+            var result = await _courseService.Delete(course);
+            return Ok(result);
+        }
+
+        [HttpGet("GetById")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var result = await _courseService.GetAsync(c => c.Id == id);
             return Ok(result);
         }
     }

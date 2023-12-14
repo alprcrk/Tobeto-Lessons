@@ -21,6 +21,7 @@ namespace DataAccess.EntityConfigurations
             builder.Property(b => b.InstructorId).HasColumnName("InstructorId").IsRequired();
             builder.Property(b => b.Description).HasColumnName("Description").IsRequired();
             builder.Property(b => b.UnitPrice).HasColumnName("UnitPrice").IsRequired();
+            builder.Property(b => b.ImageUrl).HasColumnName("ImageUrl").IsRequired();
 
             builder.HasIndex(indexExpression: b => b.Name, name: "UK_Courses_Name").IsUnique();
 

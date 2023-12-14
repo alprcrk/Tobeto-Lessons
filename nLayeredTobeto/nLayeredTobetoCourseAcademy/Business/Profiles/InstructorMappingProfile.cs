@@ -15,10 +15,15 @@ namespace Business.Mapping
     {
         public InstructorMappingProfile()
         {
-            CreateMap<CreatedInstructorResponse, Instructor>().ReverseMap();
-            CreateMap<CreateInstructorRequest, Instructor>().ReverseMap();
-            CreateMap<Paginate<Instructor>, Paginate<GetListInstructorResponse>>().ReverseMap();
+            CreateMap<Instructor, CreateInstructorRequest>().ReverseMap();
+            CreateMap<Instructor, CreatedInstructorResponse>().ReverseMap();
+            CreateMap<Instructor, UpdateInstructorRequest>().ReverseMap();
+            CreateMap<Instructor, UpdatedInstructorResponse>().ReverseMap();
+            CreateMap<Instructor, DeleteInstructorRequest>().ReverseMap();
+            CreateMap<Instructor, DeletedInstructorResponse>().ReverseMap();
+            CreateMap<Instructor, GetInstructorResponse>().ReverseMap();
             CreateMap<Instructor, GetListInstructorResponse>().ReverseMap();
+            CreateMap<Paginate<Instructor>, Paginate<GetListInstructorResponse>>().ReverseMap();
         }
     }
 }

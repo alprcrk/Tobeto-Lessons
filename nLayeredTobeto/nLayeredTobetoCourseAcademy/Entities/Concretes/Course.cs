@@ -16,5 +16,6 @@ namespace Entities.Concretes
         public decimal UnitPrice { get; set; }
         public Category Category { get; set; }
         public Instructor Instructor { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

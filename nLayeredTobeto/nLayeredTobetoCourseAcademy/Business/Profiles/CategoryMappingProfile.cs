@@ -15,16 +15,15 @@ namespace Business.Mapping
     {
         public CategoryMappingProfile()
         {
-            CreateMap<CreatedCategoryResponse, Category>().ReverseMap();
+            CreateMap<Category, CreatedCategoryResponse>().ReverseMap();
             CreateMap<Category, CreateCategoryRequest>().ReverseMap();
-            CreateMap<Paginate<Category>, Paginate<GetListCategoryResponse>>().ReverseMap();
             CreateMap<Category, GetListCategoryResponse>().ReverseMap();
             CreateMap<Category, UpdateCategoryRequest>().ReverseMap();
             CreateMap<Category, UpdatedCategoryResponse>().ReverseMap();
             CreateMap<Category, DeleteCategoryRequest>().ReverseMap();
             CreateMap<Category, DeletedCategoryResponse>().ReverseMap();
             CreateMap<Category, GetCategoryResponse>().ReverseMap();
-
+            CreateMap<Paginate<Category>, Paginate<GetListCategoryResponse>>().ReverseMap();
         }
     }
 }

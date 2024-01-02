@@ -10,12 +10,12 @@ export default function ProductDetail() {
   useEffect(() => {
     ProductService.getProductById(id)
       .then((data) => {
-        setProduct(data); 
+        setProduct(data);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
       });
-  },);
+  });
 
   return (
     <div>
@@ -23,13 +23,14 @@ export default function ProductDetail() {
         <Card fluid>
           <Card.Content>
             <Image.Group size="small">
-              {product.images && product.images.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image}
-                  style={{ cursor: "pointer" }} // Optional: Add cursor pointer for better user experience
-                />
-              ))}
+              {product.images &&
+                product.images.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    style={{ cursor: "pointer" }}
+                  />
+                ))}
             </Image.Group>
             <Card.Header>{product.title}</Card.Header>
             <Card.Meta>{product.category}</Card.Meta>
